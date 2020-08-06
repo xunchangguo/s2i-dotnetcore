@@ -69,7 +69,7 @@ RUN mkdir -p ${DOTNET_APP_PATH} ${DOTNET_DATA_PATH} && \
     useradd -u 1001 -r -g 0 -d ${HOME} -s /sbin/nologin \
       -c "Default Application User" default
 
-WORKDIR ${DOTNET_APP_PATH}
+WORKDIR ${HOME}
 COPY default-cmd.sh ${DOTNET_DEFAULT_CMD}
 CMD "./${DOTNET_DEFAULT_CMD}"
 
